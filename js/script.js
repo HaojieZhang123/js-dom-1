@@ -24,3 +24,18 @@ button.addEventListener('click', () => {
 // Al click del bottone, viene aggiunto un event listener che verifica se la classe 'off' è presente nell'elemento lampada.
 // Se la classe è presente, viene rimossa e aggiunta la classe 'on', viene cambiata l'immagine della lampada con quella accesa e cambiato il testo del bottone.
 // Se la classe 'on' é presente, viene rimossa e aggiunta la classe 'off', viene cambiata l'immagine della lampada con quella spenta e cambiato il testo del bottone.
+
+// ALternativa
+const altLamp = document.getElementById('lamp2');
+const altButton = document.querySelector('.alt-btn');
+
+altButton.addEventListener('click', () => {
+    // Controllo se la lampada e' accesa o spenta controllando direttamente l'indirizzo dell'immagine
+    if (altLamp.src.includes('white_lamp.png')) {
+        altLamp.src = 'img/yellow_lamp.png';
+        altButton.textContent = 'Spegni';
+    } else {
+        altLamp.src = 'img/white_lamp.png';
+        altButton.textContent = 'Accendi';
+    }
+});
